@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup, AbstractControl } from '@angular/forms';
 })
 export class RangeComponent implements OnInit {
 
-  public rangeConfig: any; // TODO: create a inrteface to describe fields and its values
+  public rangeConfig: any; // TODO: create a interface to describe fields and its values
   public rangeSliderForm: FormGroup;
 
   public minRangeControl: AbstractControl;
@@ -40,16 +40,16 @@ export class RangeComponent implements OnInit {
   }
 
   private rangeInpMinChangeEventHandler(value: number): void {
-    const maxControlValue: number = this.maxRangeControl.value;
+    let maxControlValue: number = this.maxRangeControl.value;
     if (value > maxControlValue) {
-      this.minRangeControl.patchValue(maxControlValue - 1);
+      this.minRangeControl.patchValue(maxControlValue--);
     }
   }
 
   private rangeInpMaxChangeEventHandler(value: number): void {
-    const minControlValue: number = this.minRangeControl.value;
+    let minControlValue: number = this.minRangeControl.value;
     if (value < minControlValue) {
-      this.maxRangeControl.patchValue(minControlValue + 1);
+      this.maxRangeControl.patchValue(minControlValue++);
     }
   }
 

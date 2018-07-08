@@ -1,9 +1,8 @@
 .c-module-range-slider {
     position: relative;
-    width: 80vw;
+    width: 100%;
     height: 35px;
     text-align: center;
-    border: 1px solid green;
 
     input[type="range"] {
       pointer-events: none;
