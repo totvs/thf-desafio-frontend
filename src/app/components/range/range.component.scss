@@ -56,6 +56,7 @@ $bgSliderThumbDisabledRangeComponent: #adb5b7 !default;
             z-index: 1;
             &:active {
               background: darken($bgSliderThumbRangeComponent, 10%);
+              cursor: col-resize;
             }
           }
 
