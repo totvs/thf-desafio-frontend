@@ -1,0 +1,47 @@
+.c-module-range-slider {
+    position: relative;
+    width: 80vw;
+    height: 35px;
+    text-align: center;
+    border: 1px solid green;
+
+    input[type="range"] {
+      pointer-events: none;
+      position: absolute;
+      overflow: hidden;
+      left: 0;
+      top: 15px;
+      width: 100%;
+      outline: none;
+      height: 18px;
+      margin: 0;
+      padding: 0;
+      &::-webkit-slider-thumb {
+        pointer-events: all;
+        position: relative;
+        z-index: 1;
+        outline: 0;
+      }
+      &::-moz-range-thumb {
+        pointer-events: all;
+        position: relative;
+        z-index: 10;
+        -moz-appearance: none;
+        width: 9px;
+      }
+      &::-moz-range-track {
+        position: relative;
+        z-index: -1;
+        background-color: rgba(0, 0, 0, 1);
+        border: 0;
+      }
+      &:last-of-type::-moz-range-track {
+        -moz-appearance: none;
+        background: none transparent;
+        border: 0;
+      }
+      &::-moz-focus-outer {
+        border: 0;
+      }
+    }
+}

@@ -1,3 +1,18 @@
-<p>
-  range works!
-</p>
+<section [ngClass]="['c-module-range-slider']">
+  <form [ngClass]="['c-module-range-slider']" [formGroup]="rangeSliderForm">
+    <span [ngClass]="['c-module-range-slider-label-min']"></span>
+    <input
+      min="0"
+      max="25"
+      step="1"
+      [formControlName]="NAME_INP_MIN_RANGE"
+      type="range">
+    <input
+      min="0"
+      max="25"
+      step="1"
+      [formControlName]="NAME_INP_MAX_RANGE"
+      type="range">
+    <span [ngClass]="['c-module-range-slider-label-max']"></span>
+  </form>
+</section>
