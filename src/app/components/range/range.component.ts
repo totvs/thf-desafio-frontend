@@ -32,8 +32,14 @@ export class RangeComponent implements OnInit {
 
   private initRangeSlideForm(): void {
     this.rangeSliderForm = this.fb.group({
-      'inpMinRange': [ this.config['initialMinValue'] || 0],
-      'inpMaxRange': [ this.config['initialMaxValue'] || 1]
+      'inpMinRange': [{
+        value: this.config['initialMinValue'] || this.config['minValue'],
+        disabled: this.config.disabled
+      }],
+      'inpMaxRange': [{
+        value: this.config['initialMaxValue'] || this.config['maxValue'],
+        disabled: this.config.disabled
+      }]
     });
 
     this.minRangeControl = this.rangeSliderForm.get(this.NAME_INP_MIN_RANGE);

@@ -1,23 +1,28 @@
 <section [ngClass]="['c-module-range-slider']">
   <form [ngClass]="['c-module-range-slider']" [formGroup]="rangeSliderForm">
     <label>{{ config.label ? config.label : 'Label'  }}</label>
+
     <span
       [ngClass]="['c-module-range-slider-label-min']"
-      [innerHTML]="minRangeControl.value"></span>
+      [innerHTML]="minRangeControl.value">
+    </span>
+
     <input
       [min]="config.minValue"
       [max]="config.maxValue"
       [step]="config.step || 1"
       [formControlName]="NAME_INP_MIN_RANGE"
-      type="range" [disabled]="config.disabled">
+      type="range">
     <input
       [min]="config.minValue"
       [max]="config.maxValue"
       [step]="config.step || 1"
       [formControlName]="NAME_INP_MAX_RANGE"
-      type="range" [disabled]="config.disabled">
+      type="range">
+
     <span
-    [ngClass]="['c-module-range-slider-label-max']"
-    [innerHTML]="maxRangeControl.value"></span>
+      [ngClass]="['c-module-range-slider-label-max']"
+      [innerHTML]="maxRangeControl.value">
+    </span>
   </form>
 </section>

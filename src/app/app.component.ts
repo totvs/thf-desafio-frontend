@@ -13,8 +13,8 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.rangeConfig1 = {
-      label: 'Simples',
       minValue: 0,
+      initialMinValue: 10,
       maxValue: 100,
       disabled: false
     };
@@ -25,6 +25,5 @@ export class AppComponent implements OnInit {
       disabled: true
     };
   }
-
 
 }
