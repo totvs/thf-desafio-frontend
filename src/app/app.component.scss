@@ -1,10 +1,10 @@
-$labelColor: #59686c!default;
+$labelColor: #3ab5c4 !default;
 
 .wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 5rem;
+  margin-top: 2rem;
   width: 100%;
   &__row {
     min-width: 50%;
@@ -14,9 +14,14 @@ $labelColor: #59686c!default;
     flex: 1;
     width: 40vw;
     padding: 2rem 3rem;
+    margin-bottom: 1rem;
+
     &-title {
-      color: $labelColor;
+      display: block;
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
       font-weight: bolder;
+      color: $labelColor;
       text-transform: uppercase;
     }
   }
