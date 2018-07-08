@@ -6,4 +6,5 @@ export interface IRangeConfig {
   initialMaxValue?: number;
   step?: number;
   disabled: boolean;
+  showValues: boolean;
 }

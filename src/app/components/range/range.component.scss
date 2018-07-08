@@ -1,4 +1,7 @@
 $labelColorNumbers: #7c878a !default;
+$bgRunnableTrackRangeComponent: #e9ebeb !default;
+$bgSliderThumbRangeComponent: #0d8fb6 !default;
+$bgSliderThumbDisabledRangeComponent: #adb5b7 !default;
 
 .c-module-range-slider {
   position: relative;
@@ -22,51 +25,60 @@ $labelColorNumbers: #7c878a !default;
 
         &-min, &-max {
           color: $labelColorNumbers;
+          text-align: center;
+          width: 5%;
         }
 
-        &-min {
-          padding-left: .5rem;
-        }
-
-        &-max {
-          padding-right: .5rem;
-        }
-
-        input[type="range"] {
-          pointer-events: none;
+        input[type=range] {
+          -webkit-appearance: none;
+          background: transparent;
           position: absolute;
           overflow: hidden;
-          left: 40px;
-          width: 82%;
           outline: none;
-          height: 18px;
+          margin-top: -5px;
+          left: 5%;
+          width: 88%;
+          height: 30px;
+
+          &:not(.with-label) {
+            width: 100%;
+            left: 0;
+            display: inline-block;
+          }
+
           &::-webkit-slider-thumb {
-            pointer-events: all;
             position: relative;
+            height: 30px;
+            width: 30px;
+            margin-top: -10px;
+            background: $bgSliderThumbRangeComponent;
+            border-radius: 100%;
             z-index: 1;
-            outline: 0;
-            width: 59px;
+            &:active {
+              background: darken($bgSliderThumbRangeComponent, 10%);
+            }
           }
-          &::-moz-range-thumb {
-            pointer-events: all;
-            position: relative;
-            z-index: 10;
-            -moz-appearance: none;
-            width: 19px;
+
+          &::-webkit-slider-runnable-track,
+          &::-webkit-slider-thumb {
+            -webkit-appearance: none;
           }
-          &::-moz-range-track {
-            position: relative;
-            z-index: -1;
-            background-color: rgba(0, 0, 0, 1);
-            border: 0;
+
+          &::-webkit-slider-runnable-track {
+            border-radius: 25px;
+            height: 10px;
+            width: 200px;
+            background: $bgRunnableTrackRangeComponent;
           }
-          &:last-of-type::-moz-range-track {
-            -moz-appearance: none;
-            background: none transparent;
-            border: 0;
+
+          &.disabled {
+            &::-webkit-slider-thumb {
+              background: $bgSliderThumbDisabledRangeComponent;
+            }
           }
-          &::-moz-focus-outer {
-            border: 0;
+
+          &:focus {
+            outline: none;
           }
       }
     }

@@ -6,15 +6,21 @@
     </h2>
 
     <div [ngClass]="['c-module-range-slider__wrapper-slide']">
-      <span
+      <div
         [ngClass]="['c-module-range-slider__wrapper-slide-min']"
-        [innerHTML]="minRangeControl.value">
-      </span>
+        [innerHTML]="minRangeControl.value"
+        *ngIf="config.showValues">
+      </div>
+
       <input
         [min]="config.minValue"
         [max]="config.maxValue"
         [step]="config.step || 1"
         [formControlName]="NAME_INP_MIN_RANGE"
+        [ngClass]="{
+            'with-label': config.showValues,
+            'disabled': config.disabled
+        }"
         type="range">
 
       <input
@@ -22,12 +28,17 @@
         [max]="config.maxValue"
         [step]="config.step || 1"
         [formControlName]="NAME_INP_MAX_RANGE"
+        [ngClass]="{
+          'with-label': config.showValues,
+          'disabled': config.disabled
+        }"
         type="range">
-      <span
+
+      <div
         [ngClass]="['c-module-range-slider__wrapper-slide-max']"
-        [innerHTML]="maxRangeControl.value">
-      </span>
+        [innerHTML]="maxRangeControl.value"
+        *ngIf="config.showValues">
+      </div>
     </div>
   </div>
-
 </form>
