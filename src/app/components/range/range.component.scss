@@ -20,13 +20,14 @@
         position: relative;
         z-index: 1;
         outline: 0;
+        width: 59px;
       }
       &::-moz-range-thumb {
         pointer-events: all;
         position: relative;
         z-index: 10;
         -moz-appearance: none;
-        width: 9px;
+        width: 19px;
       }
       &::-moz-range-track {
         position: relative;

@@ -1,17 +1,8 @@
-<label>Componente 1</label>
-
-<app-range></app-range>
-
-<label>Componente 2</label>
-
-<app-range></app-range>
-
-<label>Componente 3</label>
-
-<app-range></app-range>
-
-<label>Componente 4</label>
-
-<app-range></app-range>
-
-
+<div class="wrapper">
+  <div class="wrapper__column">
+    <app-range [config]="rangeConfig1"></app-range>
+  </div>
+  <div class="wrapper__column">
+      <app-range [config]="rangeConfig2"></app-range>
+    </div>
+</div>

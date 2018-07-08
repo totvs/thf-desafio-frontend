@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder, FormGroup, AbstractControl } from '@angular/forms';
+import { IRangeConfig } from '../../interfaces/range.config.interface';
 
 @Component({
   selector: 'app-range',
@@ -8,7 +9,8 @@ import { FormBuilder, FormGroup, AbstractControl } from '@angular/forms';
 })
 export class RangeComponent implements OnInit {
 
-  public rangeConfig: any; // TODO: create a interface to describe fields and its values
+  @Input('config') config: IRangeConfig; // TODO: create a interface to describe fields and its values
+
   public rangeSliderForm: FormGroup;
 
   public minRangeControl: AbstractControl;
@@ -20,14 +22,18 @@ export class RangeComponent implements OnInit {
   constructor(public fb: FormBuilder) { }
 
   ngOnInit() {
+   if (this.config) {
     this.initRangeSlideForm();
     this.setObservables();
+   } else {
+     throw new Error('The property config is required!');
+   }
   }
 
   private initRangeSlideForm(): void {
     this.rangeSliderForm = this.fb.group({
-      'inpMinRange': [ 0 ],
-      'inpMaxRange': [ 20 ]
+      'inpMinRange': [ this.config['initialMinValue'] || 0],
+      'inpMaxRange': [ this.config['initialMaxValue'] || 1]
     });
 
     this.minRangeControl = this.rangeSliderForm.get(this.NAME_INP_MIN_RANGE);
