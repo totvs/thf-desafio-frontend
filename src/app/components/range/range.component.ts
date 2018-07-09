@@ -26,7 +26,7 @@ export class RangeComponent implements OnInit {
     this.initRangeSlideForm();
     this.setObservables();
    } else {
-     console.error('The property config is required!');
+     throw new Error('The property config is required!');
    }
   }
 
