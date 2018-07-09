@@ -31,9 +31,9 @@ describe('RangeComponent', () => {
 
     component.config = {
       minValue: 1,
-      maxValue: 100,
+      maxValue: -100,
       disabled: false,
-      showValues: false
+      showValues: true
     };
 
     component.rangeSliderForm = formBuilder.group({
