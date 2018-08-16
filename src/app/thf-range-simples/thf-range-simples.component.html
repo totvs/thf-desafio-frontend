@@ -1,54 +1,55 @@
 <h1>EXEMPLO 1</h1>
 <section class="grid">
     <section class="box">
-      <thf-range
-        [t-label]="label" 
-        [t-min]="minimo" 
-        [t-max]="maximo" 
-        [t-inicio]="inicio" 
-        [t-fim]="fim" 
-        [t-step]="step"
-        [t-moeda]="moeda" 
-        [t-com-indicadores]="comIndicadores"
-        [t-disabled]="disabled">
-      </thf-range>
-      <section class="grid3">
-        <div class="form">
-            <label>Label</label>
-            <input type="text" [(ngModel)]="label">
-        </div>
-        <div class="form">
-            <label>Minimo</label>
-            <input type="text" [(ngModel)]="minimo">
-        </div>
-        <div class="form">
-            <label>Maximo</label>
-            <input type="text" [(ngModel)]="maximo">
-        </div>
-        <div class="form">
-            <label>Inicio</label>
-            <input type="text" [(ngModel)]="inicio">
-        </div>
-        <div class="form">
-            <label>Fim</label>
-            <input type="text" [(ngModel)]="fim">
-        </div>
-        <div class="form">
-            <label>Step</label>
-            <input type="text" [(ngModel)]="step">
-        </div>
-        <div class="form">
-            <label for="indicadores">Com Indicadores</label>
-            <input id="indicadores" type="checkbox" [(ngModel)]="comIndicadores">
-        </div>
-        <div class="form">
-            <label for="moeda">Moeda</label>
-            <input id="moeda" type="checkbox" [(ngModel)]="moeda">
-        </div>
-        <div class="form">
-            <label for="disabled">Disabled</label>
-            <input id="disabled" type="checkbox" [(ngModel)]="disabled">
-        </div>
-      </section>
-  </section>
+        <thf-range 
+            [t-label]="label" 
+            [t-min]="minimo" 
+            [t-max]="maximo" 
+            [t-inicio]="inicio" 
+            [t-fim]="fim" 
+            [t-step]="step"
+            [t-moeda]="moeda" 
+            [t-com-indicadores]="comIndicadores"
+            [t-disabled]="disabled">
+        </thf-range>
+        <section class="grid3">
+            <div class="form">
+                <label>Label</label>
+                <input type="text" [(ngModel)]="label">
+            </div>
+            <div class="form">
+                <label>Minimo</label>
+                <input type="text" [(ngModel)]="minimo">
+            </div>
+            <div class="form">
+                <label>Maximo</label>
+                <input type="text" [(ngModel)]="maximo">
+            </div>
+            <div class="form">
+                <label>Inicio</label>
+                <input type="text" [(ngModel)]="inicio">
+            </div>
+            <div class="form">
+                <label>Fim</label>
+                <input type="text" [(ngModel)]="fim">
+            </div>
+            <div class="form">
+                <label>Step</label>
+                <input type="text" [(ngModel)]="step">
+            </div>
+            <div class="form">
+                <label for="indicadores">Com Indicadores</label>
+                <input id="indicadores" type="checkbox" [(ngModel)]="comIndicadores">
+            </div>
+            <div class="form">
+                <label for="moeda">Moeda</label>
+                <input id="moeda" type="checkbox" [(ngModel)]="moeda">
+            </div>
+            <div class="form">
+                <label for="disabled">Disabled</label>
+                <input id="disabled" type="checkbox" [(ngModel)]="disabled">
+            </div>
+
+        </section>
+    </section>
 </section>

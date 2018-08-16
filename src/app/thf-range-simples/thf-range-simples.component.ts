@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { FormGroup, FormBuilder, Validators, NG_VALUE_ACCESSOR, NgForm } from "@angular/forms";
+import { ThfRangeComponent } from "../thf-range/thf-range.component";
 
 @Component({
   selector: 'thf-range-simples',
@@ -25,9 +27,9 @@ export class ThfRangeSimplesComponent implements OnInit {
 
   public moeda: boolean;
 
-  constructor() { }
+  
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }
