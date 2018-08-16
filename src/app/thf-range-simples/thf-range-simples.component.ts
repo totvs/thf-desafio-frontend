@@ -1,6 +1,4 @@
-import { Component, OnInit, Input, ViewChild } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, NG_VALUE_ACCESSOR, NgForm } from "@angular/forms";
-import { ThfRangeComponent } from "../thf-range/thf-range.component";
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'thf-range-simples',
