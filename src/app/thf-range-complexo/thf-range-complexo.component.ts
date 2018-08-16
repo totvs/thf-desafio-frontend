@@ -47,6 +47,10 @@ export class ThfRangeComplexoComponent implements OnInit {
     this.atualizaValores(this.menorValor, this.maiorValor);
   }
 
+  recebeMenorMaior(resposta) {
+    this.atualizaValores(resposta.menorAtual, resposta.maiorAtual);
+  }
+
   atualizaValores(menorAtual:number, maiorAtual:number){
     this.casasFiltradas = [];
     for(let i = 0; i< this.casas.length; i++){
