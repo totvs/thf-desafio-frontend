@@ -58,3 +58,11 @@ input[type="range"].auxiliar::-moz-range-track {
 	background: var(--track-background);
 	height: 18px;
 }
+/* estilo cursor pressed Chrome*/
+input[type="range"]:focus::-webkit-slider-thumb{
+	transform: scale(1.2);
+}
+/* estilo cursor pressed FF */
+input[type="range"]:focus::-moz-range-thumb{
+	transform: scale(1.2);
+}
