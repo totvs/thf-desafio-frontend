@@ -6,13 +6,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ThfRangeComponent } from './thf-range/thf-range.component';
 import { ThfRangeSimplesComponent } from './thf-range-simples/thf-range-simples.component';
+import { ThfRangeComplexoComponent } from './thf-range-complexo/thf-range-complexo.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ThfRangeComponent,
-    ThfRangeSimplesComponent
+    ThfRangeSimplesComponent,
+    ThfRangeComplexoComponent
   ],
   imports: [
     BrowserModule,
