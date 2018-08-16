@@ -1,0 +1,18 @@
+.box {
+    padding: 10px;
+}
+.box1 {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 10px;   
+}
+.grid{
+    display: grid;
+    grid-auto-rows: 100px; 
+    padding-top: 30px;
+}
+.grid3{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 100px;
+}

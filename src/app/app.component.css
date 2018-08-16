@@ -1,0 +1,10 @@
+.box {
+    padding: 10px;
+    display: inline-block;
+}
+.grid{
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-auto-rows: 100px; 
+    padding-top: 30px;
+}
