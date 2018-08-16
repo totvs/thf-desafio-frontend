@@ -13,4 +13,13 @@
       [t-com-indicadores]="true" 
       [t-disabled]="false"></thf-range>
   </section>
+  <section class="box">
+    <section class="grid3">
+      <div class="box1" *ngFor="let casa of casasFiltradas">
+        <div>{{casa.endereco}}</div>
+        <div>{{casa.valor | currency:'R$'}}</div>
+        <div>{{casa.tipo}}</div>
+      </div>
+    </section>
+  </section>
 </section>
