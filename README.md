@@ -14,11 +14,13 @@ O `thf-range` permite que o desenvolvedor configure o componente de acordo com a
 ```
 <thf-range 
     [t-change]="EventEmitter"
+    [t-label]="string"
     [t-min]="number" 
     [t-max]="number" 
     [t-inicio]="number" 
     [t-fim]="number" 
     [t-step]="number"
+    [t-moeda]="boolean"
     [t-com-indicadores]="boolean"
     [t-disabled]="boolean">
 </thf-range>
