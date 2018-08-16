@@ -38,6 +38,7 @@ input[type="range"]::-moz-range-thumb {
 	background: #0b9abe;
 	cursor: pointer;
 }
+
 /* estilo auxiliar */
 input[type="range"].auxiliar {
 	margin-top: -8px;
@@ -49,19 +50,23 @@ input[type="range"].auxiliar {
     --range-color: #0b9abe;
 	border: none;
 }
+
 /* estilo auxiliar chrome */
 input[type="range"].auxiliar::-webkit-slider-runnable-track {
 	background: var(--track-background);
 }
+
 /* estilo auxiliar FF */
 input[type="range"].auxiliar::-moz-range-track {
 	background: var(--track-background);
 	height: 18px;
 }
+
 /* estilo cursor pressed Chrome*/
 input[type="range"]:focus::-webkit-slider-thumb{
 	transform: scale(1.2);
 }
+
 /* estilo cursor pressed FF */
 input[type="range"]:focus::-moz-range-thumb{
 	transform: scale(1.2);
