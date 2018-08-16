@@ -1,0 +1,38 @@
+input[type="range"] {
+    -webkit-appearance: none;
+	padding: 0;
+	margin: 0;
+	vertical-align: top;
+	width: 100%;
+    float: left;
+    position: relative;
+	height: 8px;
+	border-radius: 5px;
+    background: #eceeee;
+    outline: none;
+}
+
+/*estilo cursor chrome */
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: #0b9abe;
+	cursor: pointer;
+	-webkit-transition: background .15s ease-in-out;
+}
+
+/* estilo cursor FF */
+input[type="range"]::-moz-range-thumb {
+	transform: scale(1);
+	z-index: 1;
+	appearance: none;
+	width: 15px;
+	height: 15px;
+	border: none;
+	border-radius: 50%;
+	background: #0b9abe;
+	cursor: pointer;
+}
