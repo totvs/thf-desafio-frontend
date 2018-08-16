@@ -12,13 +12,39 @@ export class ThfRangeComplexoComponent implements OnInit {
   casasFiltradas: any[] = [];
 
   menorValor: number;
-  
+
   maiorValor:number;
 
   constructor() { }
 
-  recebeMenorMaior(resposta) {
-    this.atualizaValores(resposta.menorAtual, resposta.maiorAtual);
+  ngOnInit() {
+    this.menorValor = 1500;
+    this.maiorValor = 2500;
+    
+    this.casas = [
+      {'endereco': 'Rua Voluntários, 223',
+        'valor': 1100,
+        'tipo': 'Apartamento'
+      },
+      {'endereco': 'Rua Augusta, 1133',
+        'valor': 1500,
+        'tipo': 'Apartamento'
+      },
+      {'endereco': 'Rua Flórida, 442',
+        'valor': 1700,
+        'tipo': 'Apartamento'
+      },
+      {'endereco': 'Rua Eucalipto, 821',
+        'valor': 2200,
+        'tipo': 'Casa de Condominio'
+      },
+      {'endereco': 'Rua Benedita, 13',
+        'valor': 2700,
+        'tipo': 'Casa'
+      }
+    ];
+
+    this.atualizaValores(this.menorValor, this.maiorValor);
   }
 
   atualizaValores(menorAtual:number, maiorAtual:number){
@@ -29,9 +55,6 @@ export class ThfRangeComplexoComponent implements OnInit {
       }
     }
   
-  }
-
-  ngOnInit() {
   }
 
 }
