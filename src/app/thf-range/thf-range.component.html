@@ -1,3 +1,16 @@
-<input type="range"/>
+<input 
+  #htmlInputRangeOriginal
+  type="range" 
+  [min]="minimo"
+  [max]="maximo" 
+  [value]="inicio" 
+  [step]="step" />
 
-<input type="range" class="auxiliar"/>
+<input 
+  #htmlInputRangeAuxiliar
+  type="range" 
+  class="auxiliar"
+  [min]="minimo"
+  [max]="maximo" 
+  [value]="inicio" 
+  [step]="step" />
