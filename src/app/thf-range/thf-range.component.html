@@ -1,16 +1,31 @@
-<input 
-  #htmlInputRangeOriginal
-  type="range" 
-  [min]="minimo"
-  [max]="maximo" 
-  [value]="inicio" 
-  [step]="step" />
-
-<input 
-  #htmlInputRangeAuxiliar
-  type="range" 
-  class="auxiliar"
-  [min]="minimo"
-  [max]="maximo" 
-  [value]="inicio" 
-  [step]="step" />
+<label class="label">{{label}}</label>
+<section [ngClass]="{comindicadores: comIndicadores, semindicadores: !comIndicadores}">
+	<span *ngIf="comIndicadores && moeda" class="indicadores">{{menorValorRange | currency:'R$'}}</span>
+	<span *ngIf="comIndicadores && !moeda" class="indicadores">{{menorValorRange}}</span>
+	<section>
+		<input 
+			#htmlInputRangeOriginal 
+			[min]="minimo"
+			[max]="maximo" 
+			[value]="inicio" 
+			[step]="step" 
+			(input)="atualizaValores()" 
+			type="range"
+			[disabled]="disabled"
+			[ngClass]="{disabled: disabled}"/>
+		
+		<input 
+			#htmlInputRangeAuxiliar 
+			class="thf-range auxiliar"
+			[min]="minimo"
+			[max]="maximo"  
+			[value]="fim" 
+			[step]="step" 
+			(input)="atualizaValores()"  
+			type="range"
+			[disabled]="disabled"
+			[ngClass]="{disabled: disabled}"/>
+  </section>
+	<span *ngIf="comIndicadores && !moeda" class="indicadores">{{maiorValorRange}}</span>
+  <span *ngIf="comIndicadores && moeda" class="indicadores">{{maiorValorRange | currency:'R$'}}</span>
+</section>	
