@@ -1,28 +1,38 @@
-# THF Desafio Frontend
+# Componente
 
-Construa o componente `Range` seguindo o *Guideline* da Totvs para ser utilizado em uma aplica��o Angular
+`ThfRangeComponent`
 
-![alt text](guideline-range.png "Containers")
+O `thf-range` permite que o desenvolvedor configure o componente de acordo com as necessidades estabelecidas pelo projeto em questão.
 
-## Requisitos
+# Boas práticas
 
-- Utilize HTML5 + CSS3
-- Utilize Angular 5
-- N�o utilize outros frameworks
-- Utilizar a fonte `NunitoSans`
-- O componente precisa ser responsivo
-- Teste unit�rio usando Jasmine + Karma
-- Documenta��o no formato Markdown
-- Crie 2 exemplos de uso, um basico e outro mais complexo.
+- Evite `label` extensos que quebram o layout do `thf-range`, use `labels` diretos, curtos e intuitivos.
+- Evite valores com muitas casas decimais que quebram o layout do `thf-range`.
 
-## Submiss�o
+### **Selector**
 
- - Criar um fork desse projeto e entregar via Pull Request.
+```
+<thf-range 
+    [t-change]="EventEmitter"
+    [t-min]="number" 
+    [t-max]="number" 
+    [t-inicio]="number" 
+    [t-fim]="number" 
+    [t-step]="number"
+    [t-com-indicadores]="boolean"
+    [t-disabled]="boolean">
+</thf-range>
+```
 
-## Prazo de Entrega
+### **Propriedades**   
 
-- 3 Dias.
-
-# 
-
-# Boa Sorte
+ Nome | Tipo | Padrão | Descrição
+--------|------|:------:|------
+t-change|`EventEmitter`|-|Ação que será executada quando o usuário mudar os valores do componente `thf-range`. Este evento emite o menor e o maior valor selecionado.
+t-min |`number`|-| valor mínimo do componente `thf-range`
+t-max |`number`|-| valor máximo do componente `thf-range`
+t-inicio |`number`|-| valor inicial do `thf-range`
+t-fim |`number`|-| valor final do `thf-range`
+t-step |`number`|-| valor do step do componente `thf-range`
+t-com-indicadores |`boolean`|`false`| habilita a visualização para o usuário dos valores selecionados no `thf-range`
+t-disabled |`boolean`|`false`| desabilita o `thf-range` impedindo que o usuário interaja com o mesmo
