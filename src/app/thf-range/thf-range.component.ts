@@ -71,6 +71,11 @@ export class ThfRangeComponent implements OnInit {
     this.atualiza();
   }
 
+  public atualizaValores() {
+    this.atualiza();
+    this.menorMaiorValorRangeEmitter.emit({"menorAtual": this.menorValorRange, "maiorAtual": this.maiorValorRange});
+  }
+
   private atualiza(){
     this.menorValorRange = this.calculaMenorValorRange();
     this.maiorValorRange = this.calculaMaiorValorRange();
