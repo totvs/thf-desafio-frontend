@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-thf-range',
+  selector: 'thf-range',
   templateUrl: './thf-range.component.html',
   styleUrls: ['./thf-range.component.css']
 })
