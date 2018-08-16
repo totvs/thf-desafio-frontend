@@ -12,6 +12,16 @@ input[type="range"] {
     outline: none;
 }
 
+label{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+	font-size: 13px;
+	color: #4a5c60;
+}
+
 /*estilo cursor chrome */
 input[type="range"]::-webkit-slider-thumb {
 	-webkit-appearance: none;
@@ -70,4 +80,45 @@ input[type="range"]:focus::-webkit-slider-thumb{
 /* estilo cursor pressed FF */
 input[type="range"]:focus::-moz-range-thumb{
 	transform: scale(1.2);
+}
+
+/* estilo cursor disabled chrome*/
+input[type="range"].disabled::-webkit-slider-thumb {
+	background: #b6bdbf;
+	cursor: not-allowed;
+}
+
+/* estilo cursor disabled ff */
+input[type="range"].disabled::-moz-range-thumb {
+	background: #b6bdbf;
+	cursor: not-allowed;
+}
+
+/* estilo do auxiliar disabled */
+input[type="range"].auxiliar.disabled {
+	background: var(--track-background); 
+	--track-background: linear-gradient(to right, #eceeee var(--low),
+		var(--range-color) 0, var(--range-color) var(--high), #eceeee 0)
+		no-repeat 0 49.5%/100% 27%; 
+    --range-color: #b6bdbf;
+}
+
+/* responsivo sem indicadores */
+.semindicadores{
+	display: grid; 
+    grid-template-columns: 1fr; 
+    text-align: center;
+}
+
+/* responsivo com indicadores */
+.comindicadores{
+    display: grid; 
+    grid-template-columns: 1fr 5fr 1fr; 
+    text-align: center;
+}
+
+/* estilo dos indicadores */
+.indicadores{
+	font-size: 13px;
+	margin-top: -4px;
 }
