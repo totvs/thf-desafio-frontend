@@ -1,1 +1,16 @@
-<thf-range></thf-range>
+<h1>EXEMPLO 2</h1>
+<section class="grid">
+  <section class="box">
+    <thf-range 
+      (t-change)="recebeMenorMaior($event)" 
+      [t-moeda]="true"
+      t-label="Casas para Alugar"
+      [t-min]="1000" 
+      [t-max]="3000" 
+      [t-inicio]="menorValor" 
+      [t-fim]="maiorValor" 
+      t-step="100" 
+      [t-com-indicadores]="true" 
+      [t-disabled]="false"></thf-range>
+  </section>
+</section>
