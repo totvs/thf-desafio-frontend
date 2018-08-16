@@ -21,7 +21,9 @@ input[type="range"]::-webkit-slider-thumb {
 	border-radius: 50%;
 	background: #0b9abe;
 	cursor: pointer;
-	-webkit-transition: background .15s ease-in-out;
+    -webkit-transition: background .15s ease-in-out;
+    position: relative;
+	z-index: 2;
 }
 
 /* estilo cursor FF */
@@ -35,4 +37,24 @@ input[type="range"]::-moz-range-thumb {
 	border-radius: 50%;
 	background: #0b9abe;
 	cursor: pointer;
+}
+/* estilo auxiliar */
+input[type="range"].auxiliar {
+	margin-top: -8px;
+	position: relative;
+	background: var(--track-background); 
+	--track-background: linear-gradient(to right, #eceeee var(--low),
+		var(--range-color) 0, var(--range-color) var(--high), #eceeee 0)
+		no-repeat 0 50%/100% 27%; 
+    --range-color: #0b9abe;
+	border: none;
+}
+/* estilo auxiliar chrome */
+input[type="range"].auxiliar::-webkit-slider-runnable-track {
+	background: var(--track-background);
+}
+/* estilo auxiliar FF */
+input[type="range"].auxiliar::-moz-range-track {
+	background: var(--track-background);
+	height: 18px;
 }
