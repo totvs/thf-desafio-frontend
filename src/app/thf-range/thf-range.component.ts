@@ -50,6 +50,43 @@ export class ThfRangeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.inicializaMinimoMaximo();
+    this.ajustaValorInicio();
+    this.ajustaValorFim();
+
+    this.menorValorRange = this.inicio;
+    this.maiorValorRange = this.fim;
+    this.calculaRange(this.inicio, this.fim);
   }
 
+  private inicializaMinimoMaximo(){
+    if(this.minimo == undefined){
+      this.minimo = 0;
+    }
+
+    if(this.maximo == undefined){
+      this.maximo = 100;
+    }
+  }
+
+  private ajustaValorInicio(){
+    if(this.minimo > this.inicio || this.inicio == undefined){
+      this.inicio = this.minimo;
+    }
+  }
+
+  private ajustaValorFim(){
+    if(this.maximo < this.fim || this.fim == undefined){
+      this.fim = this.maximo;
+    }
+  }
+
+  private calculaRange(menorValorRange: number, maiorValorRange: number) {
+    let expressaoLow = (menorValorRange - this.minimo)/((this.maximo-this.minimo) * 0.01);
+    let expressaoHigh = (maiorValorRange - this.minimo)/((this.maximo-this.minimo) * 0.01);
+
+    this.htmlInputRangeAuxiliar.nativeElement.style.setProperty("--low", expressaoLow + "%");
+    this.htmlInputRangeAuxiliar.nativeElement.style.setProperty("--high", expressaoHigh + "%");
+
+  }
 }
