@@ -35,6 +35,6 @@ t-max |`number`|-| valor máximo do componente `thf-range`
 t-inicio |`number`|-| valor inicial do `thf-range`
 t-fim |`number`|-| valor final do `thf-range`
 t-step |`number`|-| valor do step do componente `thf-range`
-t-moeda |`boolean`|-| habilita máscara de moeda nos indicadores
+t-moeda |`boolean`|`false`| habilita máscara de moeda nos indicadores
 t-com-indicadores |`boolean`|`false`| habilita a visualização para o usuário dos valores selecionados no `thf-range`
 t-disabled |`boolean`|`false`| desabilita o `thf-range` impedindo que o usuário interaja com o mesmo
