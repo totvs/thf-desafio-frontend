@@ -59,6 +59,24 @@ export class ThfRangeComponent implements OnInit {
     this.calculaRange(this.inicio, this.fim);
   }
 
+  ngOnChanges(){
+    this.menorValorRange = this.inicio;
+    this.maiorValorRange = this.fim;
+    this.htmlInputRangeOriginal.nativeElement.value = this.inicio;
+    this.htmlInputRangeAuxiliar.nativeElement.value = this.fim;
+    this.atualizaValoresSemEmitter();
+  }
+
+  public atualizaValoresSemEmitter() {
+    this.atualiza();
+  }
+
+  private atualiza(){
+    this.menorValorRange = this.calculaMenorValorRange();
+    this.maiorValorRange = this.calculaMaiorValorRange();
+    this.calculaRange(this.menorValorRange, this.maiorValorRange);
+  }
+
   private inicializaMinimoMaximo(){
     if(this.minimo == undefined){
       this.minimo = 0;
@@ -88,5 +106,13 @@ export class ThfRangeComponent implements OnInit {
     this.htmlInputRangeAuxiliar.nativeElement.style.setProperty("--low", expressaoLow + "%");
     this.htmlInputRangeAuxiliar.nativeElement.style.setProperty("--high", expressaoHigh + "%");
 
+  }
+
+  private calculaMenorValorRange(): number {
+    return Math.min(this.htmlInputRangeOriginal.nativeElement.value, this.htmlInputRangeAuxiliar.nativeElement.value);
+  };
+
+  private calculaMaiorValorRange(): number {
+    return Math.max(this.htmlInputRangeOriginal.nativeElement.value, this.htmlInputRangeAuxiliar.nativeElement.value);
   }
 }
