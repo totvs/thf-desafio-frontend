@@ -15,6 +15,7 @@ export class AngularSliderComponent implements OnInit {
   showValues: a boolean variable responsible for showing or hiding the current thumbs values.
   disabled: a boolean variable responsible for disabling and enabling the input.
   */
+
   @Input() minimum: number;
   @Input() maximum: number;
   @Input() init: number;
@@ -65,8 +66,14 @@ export class AngularSliderComponent implements OnInit {
       this.showValues = false;
     }
 
-    if (this.step === 0){
+    if (this.step === 0 || this.step < 0){
       this.step = 1;
+    }
+
+    if (this.minimum > this.maximum){
+      let i = this.minimum;
+      this.minimum = this.maximum;
+      this.maximum = i;
     }
 
     if (this.step > this.maximum){
@@ -84,7 +91,6 @@ export class AngularSliderComponent implements OnInit {
     if (this.disabled === undefined) {
       this.disabled = false;
     }
-
   }
 
   /*

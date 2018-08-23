@@ -19,6 +19,17 @@ Run `npm install` inside './angular-range' to install the requirements for this 
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
-## Running unit tests
+## Tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+Esta aplicação está executando a maioria dos testes criados pela utilização do Angular CLI. Entretanto, como parte do desafio, foram criados os seguintes testes:
+
+- `src/app/angular-slider/angular-slider.component.spec.ts` tests `init should be greater than, or equal to minimum`;
+- `src/app/angular-slider/angular-slider.component.spec.ts` tests `end should be less than, or equal to maximum`;
+- `src/app/angular-slider/angular-slider.component.spec.ts` tests `step should NOT be less than zero`;
+- `src/app/angular-slider/angular-slider.component.spec.ts` tests `step should NOT be equals than zero`;
+- `src/app/angular-slider/angular-slider.component.spec.ts` tests `step should NOT be greater than maximum`;
+- `src/app/angular-slider/angular-slider.component.spec.ts` tests `disables should be false by default`;
+- `src/app/angular-slider/angular-slider.component.spec.ts` tests `init should NOT be greater than maximum`;
+- `src/app/angular-slider/angular-slider.component.spec.ts` tests `minimum should NOT be less than maximum`;
