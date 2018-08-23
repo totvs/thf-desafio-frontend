@@ -26,8 +26,37 @@ export class AngularSliderComplexComponent implements OnInit {
   ];
   filteredResults = [];
 
+  /*
+  initValuePosts and endValuePosts: hold the data from the object received whenever 
+  the values on the range slider change. These fields must be the same as the init 
+  and end value from the slider component at all times.
+
+  posts: an array of objects, response from a async fetch jsonplaceholder.
+  filteredPosts: an array that will hold the objects after the method filters it.
+  */
+  initialValuePosts: number;
+  endValuePosts: number;
+  posts = [];
+  filteredPosts = [];
+
   constructor() { }
-  ngOnInit() { }
+  ngOnInit() { this.fetchPosts (); }
+
+  /*
+  An async method fetching a JSON from a real API and filling the posts array.
+  The method then calls the filters posts to show the values to the user, using the default values
+  on the range.
+  */
+  async fetchPosts () {
+    const response = await fetch ('https://jsonplaceholder.typicode.com/posts');
+    const data = await response.json ();
+
+    data.forEach(element => {
+      this.posts.push (element);
+    });
+
+    this.filterPosts ();
+  }
 
   /*
   This method will be called each time a value changes on the range slider,
@@ -36,10 +65,23 @@ export class AngularSliderComplexComponent implements OnInit {
 
   It calls the filterResults method to create a new list of hotels based on the new parameters.
   */
-  recieveData (event) {
+  receiveDataHotel (event) {
     this.initValue = +event.initial;
     this.endValue = +event.final;
     this.filterResults ();
+  }
+
+  /*
+  This method will be called each time a value changes on the range slider,
+  it receives an Object with two values, a initial value that represents the initial value 
+  and a final value that represents the end value on the range.
+
+  It calls the filterPosts method to create a new list of posts based on the new parameters.
+  */
+  receiveDataPosts (event) {
+    this.initialValuePosts = +event.initial;
+    this.endValuePosts = +event.final;
+    this.filterPosts ();
   }
 
   /*
@@ -52,6 +94,20 @@ export class AngularSliderComplexComponent implements OnInit {
     for (let index in this.hotels){
       if (this.hotels[index].stars >= this.initValue && this.hotels[index].stars <= this.endValue) {
         this.filteredResults.push (this.hotels [index]);
+      }
+    }
+  }
+
+  /*
+  This method cleans the current filteredPosts and iterate over the list of posts.
+  If the post id is between the range given by the user, adds to the filtered posts array
+  to be shown in the HTML.
+  */
+  filterPosts () {
+    this.filteredPosts = [];
+    for (let index in this.posts){
+      if (this.posts[index].id >= this.initialValuePosts && this.posts[index].id <= this.endValuePosts) {
+        this.filteredPosts.push (this.posts [index]);
       }
     }
   }

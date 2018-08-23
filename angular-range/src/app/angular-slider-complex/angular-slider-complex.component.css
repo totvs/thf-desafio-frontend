@@ -1,10 +1,18 @@
 .container-hotel-card {
     padding: 10px;
-    margin: 5px;
+    margin: 5px 0;
     background-color: #eee;
     border-radius: 5px;
 }
 
 p {
     font-size: 0.9em;
+}
+
+.simple-example-container {
+    padding: 25px 0;
+}
+
+.complex-example-container {
+    padding: 25px 0;
 }
