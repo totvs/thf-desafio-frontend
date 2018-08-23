@@ -32,7 +32,7 @@ export class AngularSliderComplexComponent implements OnInit {
   the values on the range slider change. These fields must be the same as the init 
   and end value from the slider component at all times.
 
-  posts: an array of objects, response from a async fetch jsonplaceholder.
+  posts: an array of objects, response from an async fetch to jsonplaceholder.
   filteredPosts: an array that will hold the objects after the method filters it.
   */
   initialValuePosts: number;
@@ -45,7 +45,7 @@ export class AngularSliderComplexComponent implements OnInit {
 
   /*
   An async method fetching a JSON from a real API and filling the posts array.
-  The method then calls the filters posts to show the values to the user, using the default values
+  The method then calls the filterPosts posts to show the values to the user, using the default values
   on the range.
   */
   async fetchPosts () {

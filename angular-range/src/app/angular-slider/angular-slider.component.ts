@@ -14,8 +14,10 @@ export class AngularSliderComponent implements OnInit {
   step: controls how much will the slide move when dragged.
   showValues: a boolean variable responsible for showing or hiding the current thumbs values.
   disabled: a boolean variable responsible for disabling and enabling the input.
+  label: range description;
+  sendValues: an event emitter that will send the current init and end values to each component that
+  implements this range.
   */
-
   @Input() minimum: number;
   @Input() maximum: number;
   @Input() init: number;
