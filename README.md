@@ -11,7 +11,7 @@ Construa o componente `Range` seguindo o *Guideline* da TOTVS para ser utilizado
 - [X] Não utilize outros frameworks;
 - [X] Utilizar a fonte `NunitoSans`;
 - [X] O componente precisa ser responsivo;
-- [ ] Teste unitário usando Jasmine + Karma;
+- [X] Teste unitário usando Jasmine + Karma;
 - [X] Documentação no formato Markdown;
 - [X] Crie 2 exemplos de uso, um basico e outro mais complexo;
 
@@ -21,7 +21,7 @@ Toda a documentação pode ser encontrada dentro da pasta do projeto em `./angul
 
 ## Submissão
 
- - Criar um fork desse projeto e entregar via Pull Request.
+ - Criar um fork desse projeto e entregar via pull request.
 
 ## Prazo de Entrega
 
