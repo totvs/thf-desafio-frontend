@@ -13,7 +13,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Settings
 
-Run `npm install` inside './angular-range' to install the requirements for this project.
+Run `npm install` inside './angular-range' to install the requirements for this project. This might take a while, don't worry.
 
 ## Server
 
