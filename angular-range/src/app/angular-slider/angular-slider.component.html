@@ -1,0 +1,11 @@
+<section class="multiple-range-slider-outer">
+  <label> {{ label }} </label>
+	<section [ngClass]="{'range-without-values': !showValues, 'range-with-values': showValues}">
+    <span *ngIf="showValues" class="values-label">{{init}}</span>
+    <section>
+      <input [min]="minimum" [max]="maximum" [value]="init" [step]="step" (input)="recieveInitValue ($event)" type="range" [disabled]="disabled" class="input-range init-range" />
+      <input [min]="minimum" [max]="maximum" [value]="end" [step]="step" (input)="recieveEndValue ($event)" type="range" [disabled]="disabled" class="input-range end-range"/>
+    </section>
+    <span *ngIf="showValues" class="values-label">{{end}}</span>
+  </section>
+</section>

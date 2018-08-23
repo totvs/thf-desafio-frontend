@@ -1,0 +1,179 @@
+/* -------------- */
+/* CONTAINER */
+/* -------------- */
+
+.multiple-range-slider-outer {
+  padding: 10px 0;
+}
+
+/* -------------- */
+/* SLIDER GENERAL */
+/* -------------- */
+
+label {
+  display: block;
+  margin-bottom: 20px;
+
+  font-weight: 900;
+  font-weight: bold;
+  font-size: 0.85em;
+  color: rgb(25, 25, 25);
+}
+
+.values-label {
+  font-size: 0.9em;
+  margin-top: -6px;
+}
+
+.range-without-values {
+  display: grid;
+  grid-template-columns: 100%;
+}
+
+.range-with-values {
+  display: grid;
+  grid-template-columns: 3% 91% 3%;
+  grid-gap: 1.5%;
+  text-align: center;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #e9ebeb;
+
+  width: 100%;
+  height: 5px;
+  border: none;  
+  border-radius: 5px;
+
+  float: left;
+  position: relative;
+
+  outline: none;
+  pointer-events: none;
+}
+
+input[type="range"].end-range {
+  margin-top: -5px;
+  position: relative;
+}
+
+/* -------------- */
+/* CHROME */
+/* -------------- */
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #0d8fb6;
+
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+
+  position: relative;
+  z-index: 1;
+
+  cursor: pointer;
+  pointer-events: all;
+
+  -webkit-animation-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+
+input[type="range"]:active::-webkit-slider-thumb {
+  transform: scale(1.15);
+}
+
+input[type="range"]:disabled::-webkit-slider-thumb {
+  background: #b6bdbf;
+  cursor: not-allowed;
+}
+
+/* -------------- */
+/* MOZILLA */
+/* -------------- */
+
+input[type="range"]::-moz-range-thumb {
+  -moz-appearance: none;
+  appearance: none;
+  background: #0b9abe;
+
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+
+  position: relative;
+  z-index: 1;
+
+  cursor: pointer;
+  pointer-events: all;
+
+  -moz-animation-duration: 0.2s;
+  transition-duration: 0.2s;
+
+  /* 
+  The thumb on the init-range was behind the end-range track despite the z-index.
+  When clicked, the thumb would come up both tracks, since the only method in :active is
+  transform this rotate solves that problem. 
+  */
+  transform: rotate(45deg); 
+}
+
+input[type="range"].end-range::-moz-range-track {
+  background-color: #e9ebeb;
+  height: 5px;
+}
+
+/* 
+Even with border 0 specified before, 
+mozilla needs ::-moz-focus-outer, 
+otherwise a dash border will appear arround the track
+*/
+input[type="range"]::-moz-focus-outer {
+  border: 0;
+}
+
+input[type="range"]:active::-moz-range-thumb {
+  transform: scale(1.15);
+}
+
+input[type="range"]:disabled::-moz-range-thumb {
+  background: #b6bdbf;
+  cursor: not-allowed;
+}
+
+/* -------------- */
+/* IE */
+/* -------------- */
+
+input[type="range"]::-ms-thumb {
+  appearance: none;
+  background: #0d8fb6;
+
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+
+  position: relative;
+  z-index: 1;
+
+  cursor: pointer;
+  pointer-events: all;
+  transition-duration: 0.2s;
+}
+
+input[type="range"].end-range::-ms-track {
+  background-color: #e9ebeb;
+}
+
+input[type="range"]:active::-ms-thumb {
+  transform: scale(1.15);
+}
+
+input[type="range"]:disabled::-ms-thumb {
+  background: #b6bdbf;
+  cursor: not-allowed;
+}

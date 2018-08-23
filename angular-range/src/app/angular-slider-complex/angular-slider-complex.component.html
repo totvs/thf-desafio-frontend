@@ -1,0 +1,30 @@
+<section class="container">
+  <section class="simple-example-container">
+    <app-angular-slider 
+      [minimum]="1" 
+      [maximum]="5" 
+      [init]="1" 
+      [end]="5" 
+      [step]="1" 
+      [disabled]="false" 
+      [showValues]="true" 
+      label="Range (complex example): "
+      (sendValues)="receiveDataHotel ($event)">
+    </app-angular-slider>
+    <p class="container-hotel-card" *ngFor="let i of filteredResults"> {{ i.name }} has {{ i.rooms }} room(s) available. <b>The hotel is rated with {{ i.stars }} stars</b> and costs {{ i.price }} per night. </p>
+  </section>
+  <section class="complex-example-container">
+    <app-angular-slider 
+      [minimum]="0" 
+      [maximum]="10" 
+      [init]="0" 
+      [end]="10" 
+      [step]="1" 
+      [disabled]="false" 
+      [showValues]="true" 
+      label="Range (using JSONPlaceholder API): "
+      (sendValues)="receiveDataPosts ($event)">
+    </app-angular-slider>
+    <p class="container-hotel-card" *ngFor="let i of filteredPosts"> Comment: {{ i.body }}</p>
+  </section>
+</section>
