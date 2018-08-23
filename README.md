@@ -1,27 +1,31 @@
-# THF Desafio Frontend
+# THF Desafio Frontend - Vitor Figueredo
 
-Construa o componente `Range` seguindo o *Guideline* da Totvs para ser utilizado em uma aplicaÁ„o Angular
+Construa o componente `Range` seguindo o *Guideline* da TOTVS para ser utilizado em uma aplica√ß√£o Angular.
 
 ![alt text](guideline-range.png "Containers")
 
 ## Requisitos
 
-- Utilize HTML5 + CSS3
-- Utilize Angular 5
-- N„o utilize outros frameworks
-- Utilizar a fonte `NunitoSans`
-- O componente precisa ser responsivo
-- Teste unit·rio usando Jasmine + Karma
-- DocumentaÁ„o no formato Markdown
-- Crie 2 exemplos de uso, um basico e outro mais complexo.
+- [X] Utilize HTML5 + CSS3;
+- [X] Utilize Angular 5;
+- [X] N√£o utilize outros frameworks;
+- [X] Utilizar a fonte `NunitoSans`;
+- [X] O componente precisa ser responsivo;
+- [ ] Teste unit√°rio usando Jasmine + Karma;
+- [X] Documenta√ß√£o no formato Markdown;
+- [X] Crie 2 exemplos de uso, um basico e outro mais complexo;
 
-## Submiss„o
+## Documenta√ß√£o
+
+Toda a documenta√ß√£o pode ser encontrada dentro da pasta do projeto em `./angular-range`.
+
+## Submiss√£o
 
  - Criar um fork desse projeto e entregar via Pull Request.
 
 ## Prazo de Entrega
 
-- 3 Dias.
+- 3 dias.
 
 # 
 
