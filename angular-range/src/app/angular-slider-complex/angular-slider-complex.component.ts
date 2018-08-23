@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './angular-slider-complex.component.html',
   styleUrls: ['./angular-slider-complex.component.css']
 })
+
 export class AngularSliderComplexComponent implements OnInit {
 
   /*

@@ -5,6 +5,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   templateUrl: './angular-slider.component.html',
   styleUrls: ['./angular-slider.component.css']
 })
+
 export class AngularSliderComponent implements OnInit {
 
   /*
