@@ -1,0 +1,65 @@
+<div>
+    <h1>Desafio TOTVS - Range</h1>
+    <div class="header">
+        <mat-card-title>Range</mat-card-title>
+        <mat-icon
+          class="close"
+          (click)="close()"
+        >clear</mat-icon>
+      </div>
+      <div>
+      <mat-table
+        class="products-table"
+        [dataSource]="dataSource">
+      
+        <ng-container matColumnDef="name">
+          <mat-cell
+            class="name"
+            *matCellDef="let element">
+            <mat-checkbox [(ngModel)]="element.active">{{ element.name }}</mat-checkbox>
+          </mat-cell>
+        </ng-container>
+      
+        <ng-container matColumnDef="from">
+          <mat-cell
+            class="range-control"
+            *matCellDef="let element">
+            <mat-form-field>
+              <input matInput [(ngModel)]="element.from" type="number" [disabled]="!element.active">
+            </mat-form-field>
+          </mat-cell>
+        </ng-container>
+      
+        <ng-container matColumnDef="range">
+          <mat-cell
+            class="range-control range"
+            *matCellDef="let element">
+            <ng5-slider
+              [(value)]="element.from"
+              [(highValue)]="element.to"
+              [options]="{
+                floor: 0,
+                ceil: 100,
+                disabled: !element.active,
+                hideLimitLabels: true,
+                hidePointerLabels: true
+              }"
+              [manualRefresh]="slidersRefresh"
+            ></ng5-slider>
+          </mat-cell>
+        </ng-container>
+      
+        <ng-container matColumnDef="to">
+          <mat-cell
+            class="range-control"
+            *matCellDef="let element">
+            <mat-form-field>
+              <input matInput [(ngModel)]="element.to"  type="number" [disabled]="!element.active">
+            </mat-form-field>
+          </mat-cell>
+        </ng-container>
+      
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+    </div>  
+</div>

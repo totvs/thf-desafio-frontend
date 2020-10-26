@@ -1,77 +1,27 @@
-# PO UI Desafio Frontend
+# DesafioTotvs
 
-Construa um componente `Range`, conforme a imagem abaixo, para ser utilizado em uma aplicação Angular
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
-![alt text](guideline-range.png "Containers")
+## Development server
 
-## Especificação
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Propriedades que o componente deve possuir:
+## Code scaffolding
 
-- **min**: Valor mínimo (default: 0)
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-- **max**: Valor máximo (default: 100)
+## Build
 
-- **label**: Rótulo do campo, indica sobre qual informação pertence.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-- **disabled**: Desabilita a interação do componente;
+## Running unit tests
 
-- **opcional**: Informa que o componente é opcional;
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-- **hide-values**: Esconde os valores do componente.
+## Running end-to-end tests
 
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-Além dessas propriedades, deve ser possivel informar tanto [(ngModel)] (Template Driven) quanto formControlName (Reactive Forms)
+## Further help
 
-### Exemplo de uso
-
-```
-<app-range 
-  [(ngModel)]="rangeValue"
-  label="Intervalo entre valores"
-  opcional>
-</app-range>
-```
-
-```
-<app-range 
-  [(ngModel)]="rangeValue"
-  label="Intervalo entre valores"
-  min="50"
-  max="250">
-</app-range>
-```
-
-```
-<app-range
-  [(ngModel)]="rangeValue"
-  label="Intervalo entre valores"
-  disabled
-  hide-values>
-</app-range>
-```
-
-Pode-se utilizar nossos reposítorios como consulta e também nosso styleguide de codificação:
-- [Campos de entrada do PO UI](https://github.com/po-ui/po-angular/tree/master/projects/ui/src/lib/components/po-field)
-- [Styleguide de codificação](https://github.com/po-ui/po-angular/blob/master/STYLEGUIDE.md)
-
-## Requisitos
-
-- Utilize o Angular mais atualizado
-- Não utilize outros frameworks (bootstrap/material)
-- O componente precisa ser responsivo
-- Teste unitário usando Jasmine + Karma
-- Documentação no formato Markdown
-- Crie 2 exemplos de uso, um basico e outro mais avançado.
-
-## Submissão
-
- - Criar um fork desse projeto e entregar via Pull Request.
-
-## Prazo de Entrega
-
-- 3 Dias.
-
-# 
-
-# Boa Sorte
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
